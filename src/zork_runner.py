@@ -1,20 +1,22 @@
 from time import sleep
 from asyncio.subprocess import PIPE
 import asyncio
-from chatgpt_wrapper.openai.api import AsyncOpenAIAPI
-from chatgpt_wrapper.config import Config
-from chatgpt_wrapper.openai.database import Database
-from chatgpt_wrapper.openai.user import UserManager
+
+from chatgpt_wrapper import OpenAIAPI
+from chatgpt_wrapper.backends.openai.database import Database
+from chatgpt_wrapper.backends.openai.user import UserManager
+from chatgpt_wrapper.core.config import Config
 
 config = Config()
 config.set('database', 'sqlite:///storage.db')
+config.set('chat.model', 'gpt4')
 
 manager = UserManager(config)
 database = Database(config)
 # database.create_schema()
 # manager.register("zedmor", email="zedmor@zzz.ccc", password="abc12345")
 
-gpt = AsyncOpenAIAPI(config)
+gpt = OpenAIAPI(config)
 gpt.set_current_user(manager.get_by_username_or_email(identifier="zedmor")[1])
 
 prompt = """
@@ -218,21 +220,23 @@ async def interact_with_command(command, gpt):
     # Start the coroutine to handle stdout in a separate task.
     stdout_queue = asyncio.Queue()
     asyncio.ensure_future(handle_stdout(process.stdout, stdout_queue.put))
+    process.stdin.write(b'\n')
+
 
     # Read input from the user and feed it to the GPT object.
 
     while True:
         line = await stdout_queue.get()
-        print(f"ZORK: {line}")
+        print(f"IF: {line}")
         assert line.endswith('>')
         line = line[:-1]
-        success, response, message = await gpt.ask(line.strip())
-        print(f"GPT: {response}")
+        success, response, message = gpt.ask(line.strip())
         sleep(3)
         if success:
             # Send the response back to the command.
+            print(f"GPT4: {response}")
             process.stdin.write(response.encode() + b"\n")
-            await process.stdin.drain()
+            # await process.stdin.drain()
 
         else:
             # If the GPT object returned an error, print it and exit the loop.
@@ -246,7 +250,7 @@ async def interact_with_command(command, gpt):
 
 async def main():
     # Create a GPT object and start the coroutine to interact with the command.
-    await interact_with_command("zork", gpt)
+    await interact_with_command("/usr/games/dfrotz ~/Downloads/sherlock-nosound-r4-s880324.z5 -p", gpt)
 
 
 asyncio.run(main())
