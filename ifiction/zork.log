@@ -1,0 +1,279 @@
+IF: Welcome to Dungeon.			This version created 11-MAR-91.
+You are in an open field west of a big white house with a boarded
+front door.
+There is a small mailbox here.
+>
+GPT4: OPEN THE MAILBOX
+IF: Opening the mailbox reveals:
+  A leaflet.
+>
+GPT4: TAKE THE LEAFLET
+IF: Taken.
+>
+GPT4: READ THE LEAFLET
+IF: Welcome to Dungeon!
+
+   Dungeon is a game of adventure, danger, and low cunning.  In it
+you will explore some of the most amazing territory ever seen by mortal
+man.  Hardened adventurers have run screaming from the terrors contained
+within.
+
+   In Dungeon, the intrepid explorer delves into the forgotten secrets
+of a lost labyrinth deep in the bowels of the earth, searching for
+vast treasures long hidden from prying eyes, treasures guarded by
+fearsome monsters and diabolical traps!
+
+   No DECsystem should be without one!
+
+   Dungeon was created at the Programming Technology Division of the MIT
+Laboratory for Computer Science by Tim Anderson, Marc Blank, Bruce
+Daniels, and Dave Lebling.  It was inspired by the Adventure game of
+Crowther and Woods, and the Dungeons and Dragons game of Gygax
+and Arneson.  The original version was written in MDL (alias MUDDLE).
+The current version was translated from MDL into FORTRAN IV by
+a somewhat paranoid DEC engineer who prefers to remain anonymous,
+and was later translated to C.
+
+   On-line information may be obtained with the commands HELP and INFO.
+>
+GPT4: GO TO THE WHITE HOUSE
+IF: I don't understand that.
+>
+GPT4: WALK TO THE WHITE HOUSE
+IF: I don't understand that.
+>
+GPT4: EAST
+IF: The door is locked, and there is evidently no key.
+>
+GPT4: WALK WEST
+IF: You are in a forest, with trees in all directions around you.
+>
+GPT4: WALK SOUTH
+IF: You are in a dimly lit forest, with large trees all around.  To the
+east, there appears to be sunlight.
+>
+GPT4: WALK EAST
+IF: You are in a clearing, with a forest surrounding you on the west
+and south.
+There is a pile of leaves on the ground.
+>
+GPT4: SEARCH THE PILE OF LEAVES
+IF: I don't understand that.
+>
+GPT4: EXAMINE THE PILE OF LEAVES
+IF: I see nothing special about the pile of leaves.
+>
+GPT4: MOVE THE PILE OF LEAVES
+IF: Done.
+A grating appears on the ground.
+>
+GPT4: OPEN THE GRATING
+IF: The grating is locked.
+>
+GPT4: WALK WEST
+IF: You are in a dimly lit forest, with large trees all around.  One
+particularly large tree with some low branches stands here.
+>
+GPT4: CLIMB THE LARGE TREE
+IF: I can't see one here.
+>
+GPT4: WALK NORTH
+IF: You are in a dimly lit forest, with large trees all around.  To the
+east, there appears to be sunlight.
+>
+GPT4: WALK NORTH
+IF: You are facing the south side of a white house.  There is no door here,
+and all the windows are barred.
+>
+GPT4: WALK EAST
+IF: You are behind the white house.  In one corner of the house
+there is a window which is slightly ajar.
+>
+GPT4: OPEN THE WINDOW
+IF: With great effort, you open the window far enough to allow passage.
+>
+GPT4: ENTER THE WINDOW
+IF: You are in the kitchen of the white house.  A table seems to have
+been used recently for the preparation of food.  A passage leads to
+the west, and a dark staircase can be seen leading upward.  To the
+east is a small window which is open.
+On the table is an elongated brown sack, smelling of hot peppers.
+A clear glass bottle is here.
+The glass bottle contains:
+  A quantity of water.
+>
+GPT4: TAKE THE SACK AND THE BOTTLE
+IF: I don't understand that.
+>
+GPT4: TAKE THE SACK AND TAKE THE BOTTLE
+IF: I don't understand that.
+>
+GPT4: TAKE THE SACK. TAKE THE BOTTLE.
+IF: Taken.
+Taken.
+>
+GPT4: GO UP THE STAIRCASE
+IF: It is pitch dark.  You are likely to be eaten by a grue.
+>
+GPT4: TURN ON THE LIGHT
+IF: It is too dark in here to see.
+>
+GPT4: GO DOWN THE STAIRCASE
+IF: You are in the kitchen of the white house.  A table seems to have
+been used recently for the preparation of food.  A passage leads to
+the west, and a dark staircase can be seen leading upward.  To the
+east is a small window which is open.
+>
+GPT4: WALK WEST
+IF: You are in the living room.  There is a door to the east.  To the west
+is a wooden door with strange gothic lettering, which appears to be
+nailed shut.
+In the center of the room is a large oriental rug.
+There is a trophy case here.
+On hooks above the mantlepiece hangs an elvish sword of great antiquity.
+A battery-powered brass lantern is on the trophy case.
+There is an issue of US NEWS & DUNGEON REPORT dated 11-MAR-91 here.
+>
+GPT4: TAKE THE LANTERN AND THE SWORD
+IF: I don't understand that.
+>
+GPT4: TAKE THE LANTERN. TAKE THE SWORD.
+IF: Taken.
+Taken.
+>
+GPT4: TURN ON THE LANTERN
+IF: The lamp is now on.
+>
+GPT4: GO UP THE STAIRCASE
+IF: There is no way up.
+>
+GPT4: GO TO THE KITCHEN
+IF: I don't understand that.
+>
+GPT4: WALK EAST
+IF: You are in the kitchen of the white house.  A table seems to have
+been used recently for the preparation of food.  A passage leads to
+the west, and a dark staircase can be seen leading upward.  To the
+east is a small window which is open.
+>
+GPT4: GO UP THE STAIRCASE
+IF: You are in the attic.  The only exit is stairs that lead down.
+A large coil of rope is lying in the corner.
+On a table is a nasty-looking knife.
+There is a square brick here which feels like clay.
+>
+GPT4: TAKE THE ROPE, KNIFE, AND THE SQUARE BRICK
+IF: Taken.
+What should I do with the knife?
+>
+GPT4: TAKE THE KNIFE
+IF: Taken.
+>
+GPT4: GO DOWN THE STAIRCASE
+IF: You are in the kitchen of the white house.  A table seems to have
+been used recently for the preparation of food.  A passage leads to
+the west, and a dark staircase can be seen leading upward.  To the
+east is a small window which is open.
+>
+GPT4: WALK WEST
+IF: You are in the living room.  There is a door to the east.  To the west
+is a wooden door with strange gothic lettering, which appears to be
+nailed shut.
+In the center of the room is a large oriental rug.
+There is a trophy case here.
+There is an issue of US NEWS & DUNGEON REPORT dated 11-MAR-91 here.
+>
+GPT4: MOVE THE ORIENTAL RUG
+IF: With a great effort, the rug is moved to one side of the room.
+With the rug moved, the dusty cover of a closed trap door appears.
+>
+GPT4: OPEN THE TRAP DOOR
+IF: The door reluctantly opens to reveal a rickety staircase descending
+into darkness.
+>
+GPT4: GO DOWN THE STAIRCASE
+IF: You are in a dark and damp cellar with a narrow passageway leading
+east, and a crawlway to the south.  To the west is the bottom of a
+steep metal ramp which is unclimbable.
+The door crashes shut, and you hear someone barring it.
+Your sword is glowing with a faint blue glow.
+>
+GPT4: WALK EAST
+IF: You are in a small room with passages off in all directions.
+Bloodstains and deep scratches (perhaps made by an axe) mar the walls.
+A nasty-looking troll, brandishing a bloody axe, blocks all passages
+out of the room.
+You parry the blow, but your knife is knocked from your hand.
+Fortunately, you still have a sword.
+You sword has begun to glow very brightly.
+>
+GPT4: KILL THE TROLL WITH THE SWORD
+IF: The troll takes a final blow and slumps to the floor dead.
+Almost as soon as the troll breathes his last, a cloud of
+sinister black smoke envelops him, and when the fog lifts, the
+carcass has disappeared.
+Your sword is no longer glowing.
+>
+GPT4: WALK SOUTH
+IF: You are in a maze of twisty little passages, all alike.
+>
+GPT4: WALK NORTH
+IF: You are in a maze of twisty little passages, all alike.
+>
+GPT4: WALK WEST
+IF: You are in a small room with passages off in all directions.
+Bloodstains and deep scratches (perhaps made by an axe) mar the walls.
+There is a nasty-looking knife lying here.
+>
+GPT4: TAKE THE KNIFE
+IF: Taken.
+>
+GPT4: WALK NORTH
+IF: You are in a narrow east-west passageway.  There is a narrow staircase
+leading down at the north end of the room.
+>
+GPT4: WALK DOWN THE STAIRCASE
+IF: You are in a deep ravine at a crossing with an east-west crawlway.
+Some stone steps are at the south of the ravine and a steep staircase
+descends.
+>
+GPT4: WALK SOUTH UP THE STEPS
+IF: You are in a narrow east-west passageway.  There is a narrow staircase
+leading down at the north end of the room.
+>
+GPT4: WALK EAST
+IF: You are in a circular room with passages off in eight directions.
+Your compass needle spins wildly, and you cannot get your bearings.
+Someone carrying a large bag is casually leaning against one of the
+walls here.  He does not speak, but it is clear from his aspect that
+the bag will be taken only over his dead body.
+You sword has begun to glow very brightly.
+>
+GPT4: KILL THE MAN WITH THE SWORD
+IF: The thief is staggered and drops to his knees.
+The thief slowly regains his feet.
+>
+GPT4: KILL THE THIEF WITH THE SWORD
+Probably defective prompt: The thief is struck on the arm, blood begins to trickle down.
+The thief knocks you out.
+The thief, noticing you beginning to stir, reluctantly finishes you off.
+It appears that the last blow was too much for you.  I'm afraid
+that you are dead.
+You clearly are a suicidal maniac.  We don't allow psychotics in the
+dungeon, since they may harm other adventurers.  Your remains will be
+installed in the land of the living dead, where your fellow adventurers
+may gloat over them.
+Your score is 40 [total of 585 points], in 56 moves.
+This gives you the rank of Amateur Adventurer.
+IF: The thief is struck on the arm, blood begins to trickle down.
+The thief knocks you out.
+The thief, noticing you beginning to stir, reluctantly finishes you off.
+It appears that the last blow was too much for you.  I'm afraid
+that you are dead.
+You clearly are a suicidal maniac.  We don't allow psychotics in the
+dungeon, since they may harm other adventurers.  Your remains will be
+installed in the land of the living dead, where your fellow adventurers
+may gloat over them.
+Your score is 40 [total of 585 points], in 56 moves.
+This gives you the rank of Amateur Adventurer.
+GPT4: I'm sorry that your adventure has ended here. However, you can restart your adventure at any time if you would like to try a different approach. Good luck!

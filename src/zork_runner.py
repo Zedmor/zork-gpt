@@ -195,6 +195,7 @@ async def handle_stdout(stdout, callback):
 
         if not line:  # if the line is empty, the process has exited
             break
+        # line = line.replace('\t', ' ').replace('\n', ' ')
         await callback(line.strip())  # add the line to the queue, waiting if necessary
 
 
@@ -219,6 +220,8 @@ async def interact_with_command(command, gpt):
 
     # Start the coroutine to handle stdout in a separate task.
     stdout_queue = asyncio.Queue()
+    stdin_queue = asyncio.Queue()
+    asyncio.ensure_future(handle_stdin(process.stdin, stdin_queue))
     asyncio.ensure_future(handle_stdout(process.stdout, stdout_queue.put))
     process.stdin.write(b'\n')
 
@@ -227,8 +230,12 @@ async def interact_with_command(command, gpt):
 
     while True:
         line = await stdout_queue.get()
+        if len(line) < 2:
+            continue
+        if not line.endswith('>'):
+            print(f"Probably defective prompt: {line}")
+        # line = line.replace('>', '')
         print(f"IF: {line}")
-        assert line.endswith('>')
         line = line[:-1]
         success, response, message = gpt.ask(line.strip())
         sleep(3)
@@ -250,7 +257,9 @@ async def interact_with_command(command, gpt):
 
 async def main():
     # Create a GPT object and start the coroutine to interact with the command.
-    await interact_with_command("/usr/games/dfrotz ~/Downloads/sherlock-nosound-r4-s880324.z5 -p", gpt)
+    await interact_with_command("zork",
+                                gpt)
+    # await interact_with_command("/usr/games/dfrotz ~/Downloads/sherlock-nosound-r4-s880324.z5 -p", gpt)
 
 
 asyncio.run(main())
